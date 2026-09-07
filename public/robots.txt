@@ -1,0 +1,4 @@
+   User-agent: *
+   Allow: /
+
+   Sitemap: https://punjab-scheme-checker.vercel.app/sitemap.xml  
