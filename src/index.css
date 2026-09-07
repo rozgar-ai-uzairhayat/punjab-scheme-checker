@@ -1,0 +1,262 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0b1f34;
+  --color-primary-container: #22344a;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #8a9db7;
+  --color-primary-fixed: #d2e4ff;
+  --color-primary-fixed-dim: #b5c8e4;
+  --color-on-primary-fixed: #081c31;
+  --color-on-primary-fixed-variant: #36485f;
+
+  --color-secondary: #486556;
+  --color-secondary-container: #c7e7d4;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #4c695a;
+  --color-secondary-fixed: #caead7;
+  --color-secondary-fixed-dim: #aecebc;
+  --color-on-secondary-fixed: #032015;
+  --color-on-secondary-fixed-variant: #304d3f;
+
+  --color-tertiary: #2f1900;
+  --color-tertiary-container: #4c2b00;
+  --color-on-tertiary-container: #c69056;
+  --color-tertiary-fixed: #ffdcbc;
+  --color-tertiary-fixed-dim: #f6bb7c;
+  --color-on-tertiary-fixed: #2c1700;
+  --color-on-tertiary-fixed-variant: #663e09;
+
+  --color-surface: #f9f9ff;
+  --color-surface-dim: #d8d9e3;
+  --color-surface-bright: #f9f9ff;
+  --color-surface-variant: #e0e2ec;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2f3fd;
+  --color-surface-container: #ecedf7;
+  --color-surface-container-high: #e6e8f2;
+  --color-surface-container-highest: #e0e2ec;
+
+  --color-on-surface: #191c22;
+  --color-on-surface-variant: #44474d;
+  --color-outline: #74777d;
+  --color-outline-variant: #c4c6cd;
+
+  --font-headline-lg: "Newsreader", Georgia, serif;
+  --font-headline-md: "Newsreader", Georgia, serif;
+  --font-title-md: "Newsreader", Georgia, serif;
+  --font-display-lg: "Newsreader", Georgia, serif;
+  --font-display-lg-mobile: "Newsreader", Georgia, serif;
+
+  --font-body-lg: "Inter", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+  --font-body-sm: "Inter", sans-serif;
+  --font-label-lg: "Inter", sans-serif;
+  --font-label-md: "Inter", sans-serif;
+  --font-label-sm: "Inter", sans-serif;
+}
+
+/* Custom Spacing & Typography Utilities mapped from mockup */
+@layer utilities {
+  .max-w-container-max-w {
+    max-width: 48rem;
+  }
+  .px-gutter-mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .px-gutter-desktop {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* Spacing aliases */
+  .p-space-xxs { padding: 0.25rem; }
+  .p-space-xs { padding: 0.5rem; }
+  .p-space-sm { padding: 0.75rem; }
+  .p-space-md { padding: 1rem; }
+  .p-space-lg { padding: 1.5rem; }
+  .p-space-xl { padding: 2rem; }
+  .p-space-2xl { padding: 3rem; }
+
+  .pt-space-xxs { padding-top: 0.25rem; }
+  .pt-space-xs { padding-top: 0.5rem; }
+  .pt-space-sm { padding-top: 0.75rem; }
+  .pt-space-md { padding-top: 1rem; }
+  .pt-space-lg { padding-top: 1.5rem; }
+  .pt-space-xl { padding-top: 2rem; }
+  .pt-space-2xl { padding-top: 3rem; }
+
+  .pb-space-xxs { padding-bottom: 0.25rem; }
+  .pb-space-xs { padding-bottom: 0.5rem; }
+  .pb-space-sm { padding-bottom: 0.75rem; }
+  .pb-space-md { padding-bottom: 1rem; }
+  .pb-space-lg { padding-bottom: 1.5rem; }
+  .pb-space-xl { padding-bottom: 2rem; }
+  .pb-space-2xl { padding-bottom: 3rem; }
+
+  .px-space-xxs { padding-left: 0.25rem; padding-right: 0.25rem; }
+  .px-space-xs { padding-left: 0.5rem; padding-right: 0.5rem; }
+  .px-space-sm { padding-left: 0.75rem; padding-right: 0.75rem; }
+  .px-space-md { padding-left: 1rem; padding-right: 1rem; }
+  .px-space-lg { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .px-space-xl { padding-left: 2rem; padding-right: 2rem; }
+
+  .py-space-xxs { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+  .py-space-xs { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+  .py-space-sm { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+  .py-space-md { padding-top: 1rem; padding-bottom: 1rem; }
+  .py-space-lg { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+
+  .gap-space-xxs { gap: 0.25rem; }
+  .gap-space-xs { gap: 0.5rem; }
+  .gap-space-sm { gap: 0.75rem; }
+  .gap-space-md { gap: 1rem; }
+  .gap-space-lg { gap: 1.5rem; }
+  .gap-space-xl { gap: 2rem; }
+
+  .space-y-space-xxs > :not([hidden]) ~ :not([hidden]) { margin-top: 0.25rem; }
+  .space-y-space-xs > :not([hidden]) ~ :not([hidden]) { margin-top: 0.5rem; }
+  .space-y-space-sm > :not([hidden]) ~ :not([hidden]) { margin-top: 0.75rem; }
+  .space-y-space-md > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
+  .space-y-space-lg > :not([hidden]) ~ :not([hidden]) { margin-top: 1.5rem; }
+  .space-y-space-xl > :not([hidden]) ~ :not([hidden]) { margin-top: 2rem; }
+  .space-y-space-2xl > :not([hidden]) ~ :not([hidden]) { margin-top: 3rem; }
+
+  .mb-space-xxs { margin-bottom: 0.25rem; }
+  .mb-space-xs { margin-bottom: 0.5rem; }
+  .mb-space-sm { margin-bottom: 0.75rem; }
+  .mb-space-md { margin-bottom: 1rem; }
+  .mb-space-lg { margin-bottom: 1.5rem; }
+  .mb-space-xl { margin-bottom: 2rem; }
+  .mb-space-2xl { margin-bottom: 3rem; }
+
+  .mt-space-xxs { margin-top: 0.25rem; }
+  .mt-space-xs { margin-top: 0.5rem; }
+  .mt-space-sm { margin-top: 0.75rem; }
+  .mt-space-md { margin-top: 1rem; }
+  .mt-space-lg { margin-top: 1.5rem; }
+  .mt-space-xl { margin-top: 2rem; }
+
+  /* Typography styles matching design system */
+  .font-headline-lg {
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+  .font-headline-md {
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    font-weight: 600;
+  }
+  .font-title-md {
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 19px;
+    line-height: 26px;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+  }
+  .font-display-lg {
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+  .font-body-lg {
+    font-family: "Inter", sans-serif;
+    font-size: 17px;
+    line-height: 26px;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+  .font-body-md {
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+  .font-body-sm {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+  .font-label-lg {
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    font-weight: 600;
+  }
+  .font-label-md {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    font-weight: 500;
+  }
+  .font-label-sm {
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    font-weight: 600;
+  }
+}
+
+/* Base styles */
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9ff;
+    color: #191c22;
+  }
+  body {
+    overscroll-behavior-y: none;
+    font-family: "Inter", sans-serif;
+  }
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+}
+
+/* Material symbol utility */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+/* Urdu styling when active */
+[dir="rtl"] {
+  font-family: "Noto Nastaliq Urdu", "Inter", sans-serif;
+}
+[dir="rtl"] .font-headline-lg,
+[dir="rtl"] .font-headline-md,
+[dir="rtl"] .font-title-md,
+[dir="rtl"] .font-display-lg {
+  font-family: "Noto Nastaliq Urdu", "Newsreader", serif;
+  line-height: 1.8;
+}

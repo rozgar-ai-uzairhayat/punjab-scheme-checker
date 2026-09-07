@@ -1,0 +1,6 @@
+{
+  "name": "Punjab Scheme Checker",
+  "description": "An independent citizen guidance tool based on official Government of Punjab criteria to determine public welfare and subsidy eligibility.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
