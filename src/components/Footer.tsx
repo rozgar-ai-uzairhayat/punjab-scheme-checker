@@ -2,6 +2,7 @@ import React from 'react';
 import { Language } from '../types';
 import { translations } from '../data/translations';
 
+<a href="/how-it-works.html">How it works</a>
 interface FooterProps {
   lang: Language;
 }
